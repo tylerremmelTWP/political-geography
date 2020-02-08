@@ -1,0 +1,50 @@
+<!-- FOR ALL FILES: closing up space between photos and captions, hiding credits at the end, getting rid of margin around raw html boxes, retaining margin around ai-html graphics, shrinking size of subheads -->
+
+<!-- IMPORTANT: Be sure "partner-exclude" and "force-webview" are in keywords; if story was not created as enterprise template, those will need to be added manually. -->
+
+<style type="text/css">
+  .pb-f-enterprise-enterprise-article-body
+    .ent-article-body
+    .main
+    .ent-photo-grid-big-caption {
+    padding-top: 0px;
+  }
+
+  .credits {
+    display: none;
+  }
+
+  .pb-f-enterprise-enterprise-article-body
+    .ent-article-body
+    .main
+    .ent-raw-container {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    position: relative;
+  }
+
+  .pg-graphic.fallback-available {
+    margin-top: 64px;
+    margin-bottom: 64px;
+  }
+
+  .pb-f-enterprise-enterprise-article-body
+    .ent-article-body.ent-layout-centered
+    .main
+    h2,
+  .pb-f-enterprise-enterprise-article-body
+    .ent-article-body.ent-layout-centered
+    .main
+    h3 {
+    font-size: 2.5em;
+  }
+</style>
+
+<script type="text/javascript">
+  window.addEventListener("DOMContentLoaded", event => {
+    var element = document.querySelectorAll("br");
+    for (var i = 0; i < element.length; i++) {
+      element[i].remove();
+    }
+  });
+</script>

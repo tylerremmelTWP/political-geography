@@ -1,0 +1,177 @@
+<script>
+  var topperPhoto = document.getElementsByClassName("photo-wrapper")[0];
+  var photo1 = document.createElement("img");
+  photo1.src =
+    "https://www.washingtonpost.com/resizer/QASSxsEOXJ8qv13vz_daIQX8uEE=/arc-anglerfish-washpost-prod-washpost/public/FO46MU2GUZCADOY2RGN6SZLYAI.jpg";
+
+  var photo2 = document.createElement("img");
+  photo2.src =
+    "https://www.washingtonpost.com/resizer/b1UNVeomCCI-jeqYtQ5k4VXBS6c=/arc-anglerfish-washpost-prod-washpost/public/JYKSUC5QZ5DI5IT7FLCIMCJIO4.jpg";
+
+  var photo3 = document.createElement("img");
+  photo3.src =
+    "https://www.washingtonpost.com/resizer/H3DBj-9oivpIMyll4WXLyfWPM-g=/arc-anglerfish-washpost-prod-washpost/public/MGBGLIZX7VEINFJFG2TVXN2W5U.jpg";
+
+  var photo4 = document.createElement("img");
+  photo4.src =
+    "https://www.washingtonpost.com/resizer/3MMamOaxxhy4M5S3foDeTe6SRwo=/arc-anglerfish-washpost-prod-washpost/public/TPWPCTKPFVANPGXFLRRHGLAS2U.jpg";
+
+  var photo5 = document.createElement("img");
+  photo5.src =
+    "https://www.washingtonpost.com/resizer/SCuEwNngGjLRWn7siegYfDBApRA=/arc-anglerfish-washpost-prod-washpost/public/GMFV2VF2FZD5JNWXUQVB3TAAMA.jpg";
+
+  var photo6 = document.createElement("img");
+  photo6.src =
+    "https://www.washingtonpost.com/resizer/wyLOxdobhqPYAVSTpvURqRUZOE8=/arc-anglerfish-washpost-prod-washpost/public/COJRYYTKKBA6DAR5BA5PLFRZ24.jpg";
+
+  var photo7 = document.createElement("img");
+  photo7.src =
+    "https://www.washingtonpost.com/resizer/wLnZZqBea8IU1inpi6p979G0X_g=/arc-anglerfish-washpost-prod-washpost/public/D654OEMBL5FSRIP2OS53S55VHY.jpg";
+
+  topperPhoto.querySelector("img").remove();
+
+  topperPhoto.append(photo1);
+  topperPhoto.append(photo2);
+  topperPhoto.append(photo3);
+  topperPhoto.append(photo4);
+  topperPhoto.append(photo5);
+  topperPhoto.append(photo6);
+  topperPhoto.append(photo7);
+</script>
+
+<style>
+  /* ////// 
+USE THIS SPREADSHEET TO CALCULATE ANIMATION TIMING: http://bit.ly/1PntEdd
+/////// */
+
+  .photo-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .photo-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    animation-name: xfade;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-duration: 17.5s; /* BASE ANIMATION DURATION */
+    width: 92%;
+    /* max-width: 1600px; default topper image size */
+    z-index: 1;
+  }
+
+  .photo-wrapper img:nth-of-type(1) {
+    position: relative;
+  }
+
+  @media only screen and (max-width: 767px) {
+    .pb-f-enterprise-enterprise-topper
+      .ent-topper.headline-above-photo
+      .photo-wrapper
+      img {
+      width: 100%; /* full default topper image size on mobile */
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+    .pb-f-enterprise-enterprise-topper
+      .ent-topper.headline-above-photo.has-caption {
+      margin-bottom: 0px; /* omits extra space above byline on mobile */
+    }
+  }
+
+  /* BASE ANIMATION DURATION, THIS ANIMATION IS ACTUALLY 8s, SEE http://css3.bradshawenterprises.com/cfimg/ */
+  .photo-wrapper img:nth-of-type(1) {
+    animation-delay: 15s;
+  }
+  .photo-wrapper img:nth-of-type(2) {
+    animation-delay: 12.5s;
+  }
+  .photo-wrapper img:nth-of-type(3) {
+    animation-delay: 10s;
+  }
+  .photo-wrapper img:nth-of-type(4) {
+    animation-delay: 7.5s;
+  }
+  .photo-wrapper img:nth-of-type(5) {
+    animation-delay: 5s;
+  }
+  .photo-wrapper img:nth-of-type(6) {
+    animation-delay: 2.5s;
+  }
+
+  /* USE THE KEYFRAME FIGURES FROM THE SPREADSHEET TO UPDATE ONLY THE PERCENTAGES */
+
+  @keyframes xfade {
+    0% {
+      opacity: 1;
+    }
+    8.6% {
+      opacity: 1;
+    }
+    14.3% {
+      opacity: 0;
+    }
+    94.3% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .pb-f-enterprise-enterprise-article-body
+    .ent-article-body.ent-layout-centered
+    .left-rail {
+    text-align: center;
+  }
+
+  .pb-f-enterprise-enterprise-article-body
+    .ent-article-body
+    .left-rail
+    .contributor {
+    margin-right: 0;
+  }
+
+  .pb-f-enterprise-enterprise-topper
+    .ent-topper.headline-above-photo
+    .photo-wrapper {
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .pb-f-enterprise-enterprise-topper
+      .ent-topper.headline-above-photo
+      .photo-wrapper {
+      width: 200px;
+    }
+
+    .pb-f-enterprise-enterprise-topper .photo-wrapper.et_none_full {
+      margin-top: 50px !important;
+    }
+  }
+
+  .pb-f-enterprise-enterprise-topper
+    .ent-topper.headline-above-photo
+    .title-wrapper {
+    padding-top: 40px;
+    padding-bottom: 0;
+  }
+
+  .pb-f-enterprise-enterprise-topper
+    .ent-topper.headline-above-photo
+    .title-wrapper.title-centered {
+    max-width: 640px;
+    margin: auto;
+  }
+
+  .pb-f-enterprise-enterprise-topper .photo-wrapper.et_none_full {
+    margin-top: 84px;
+  }
+</style>
